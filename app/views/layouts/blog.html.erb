@@ -9,7 +9,7 @@
        
     <link href="https://fonts.googleapis.com/css?family=Bitter|Roboto|Inconsolata|Space+Mono" rel="stylesheet"> 
 
-        <%= favicon_link_tag 'favicons/favicon.ico' %>
+      <%= favicon_link_tag 'favicons/favicon.ico' %> 
 
 
     <meta-name="keywords" content="<%= @seo_keywords %>" />
@@ -26,8 +26,15 @@
     <%= render 'shared/blog_masthead' %>
 
      <div class="container">
+     <p><%= link_to 'Write a new blog ', new_blog_path if logged_in?(:site_admin) %> / <%= link_to 'Topics', topics_path %></p> 
 
+     
+        
+          
       <div class="row">
+
+        
+          
 
         <%= yield %>
 
