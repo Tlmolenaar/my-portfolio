@@ -215,6 +215,8 @@ body {
 
 }
 
+
+
 .main-title{
     font-family: 'Fredericka the Great', cursive;
     font-size: 50px;
@@ -223,7 +225,6 @@ body {
 
 .app-card-container{
   color: black;
-  background-color: #fff8f3;
   border-radius: 4px;
   text-align: left;
   margin-top: 60px;
@@ -232,7 +233,7 @@ body {
 .app-card-container > .card{
   color: black;
   padding: 40px;
-  background-color: #fff8f3;
+  background-color: rgba(255, 242, 202, 0.7);
 }
 
 .profile-img{
@@ -309,4 +310,8 @@ about-text{
 .skill{
   margin-top:10px;
   margin-bottom: 10px;
+}
+
+.overlay{
+  opacity: 0.5
 }
