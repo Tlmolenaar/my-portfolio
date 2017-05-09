@@ -15,7 +15,6 @@ gem 'font-awesome-sass'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
@@ -48,4 +47,4 @@ gem 'twitter', '~> 6.1'
 gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4.0'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
-
+gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'
