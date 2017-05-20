@@ -9,24 +9,22 @@
     <meta-name="keywords" content="<%= @seo_keywords %>" />
 
     <%= favicon_link_tag 'favicons/favicon.ico' %>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">  
 
 
-    <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'portfolios', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
    
   </head>
 
   <body>
-
+  <div class="background">
   <%= render "shared/portfolio_nav" %>
     
 	<%= render "shared/portfolio_masthead" unless logged_in?(:site_admin) %>
 
     
     <!-- end of Masthead -->
-
-
-    
 
 
     <%= yield %>
@@ -37,5 +35,7 @@
     
 
     <%= source_helper %>
+    </div>
+    
   </body>
 </html>

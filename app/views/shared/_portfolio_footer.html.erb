@@ -1,10 +1,10 @@
 <footer class="text-muted">
   <div class="container">
-  	<p class="float-right">
+  	<p class="float-right" style="color:white;">
   		<% if logged_in?(:site_admin) %>
-      		<%= link_to "Create New Portfolio ", new_portfolio_path %>/
+      		<%= link_to "Create New Portfolio ", new_portfolio_path, class: "portfolio-footer" %>/
     	<% end %>
-    	<%= link_to 'View all portfolio items ', portfolios_path %>/
+    	<%= link_to 'View all portfolio items ', portfolios_path, class: "portfolio-footer" %>/
       	<a href="#" class="portfolio-footer">Back to top</a>
     </p>
   </div>

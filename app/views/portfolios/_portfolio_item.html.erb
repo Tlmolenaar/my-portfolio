@@ -1,5 +1,21 @@
 <div class="col-md-4">
-	<div class="card" data-id="<%= portfolio_item.id %>">
+	<div class="tile"> 
+  		<%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
+  
+  	<div class="text">
+  		<h1><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h1>
+  	
+  	<p class="animate-text"><%= portfolio_item.subtitle %></p>
+	<div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
+ </div>
+
+
+	<!-- <div class="card" data-id="<%= portfolio_item.id %>">
     
 		<%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
         <p class="card-text">
@@ -8,8 +24,11 @@
         	</span>
         	<%= portfolio_item.subtitle %>
         </p>
-	</div>
+	</div> -->
 </div>
+
+
+
 
 
 

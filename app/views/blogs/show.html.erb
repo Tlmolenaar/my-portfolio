@@ -16,7 +16,7 @@
 
    <% if @blog.image? %>
 
-    <%= image_tag(@blog.image) %>
+    <%= image_tag(@blog.image, class: 'blog-image') %>
 
   <% else %>
     <%= image_tag("http://placehold.it/600x400") %>
