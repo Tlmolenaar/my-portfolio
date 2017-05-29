@@ -10,13 +10,14 @@ class BlogsController < ApplicationController
   def index
     if logged_in?(:site_admin)
     
-    @blogs = Blog.most_recent.page(params[:page]).per(5)
+    @blogs = Blog.most_recent.page(params[:page]).per(15)
     else
    
-    @blogs = Blog.published.most_recent.page(params[:page]).per(5)
+    @blogs = Blog.published.most_recent.page(params[:page]).per(15)
     
    end
    @page_title = "My blog | Thomas Molenaar"
+   
   end
 
   # GET /blogs/1

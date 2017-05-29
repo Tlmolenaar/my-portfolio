@@ -7,49 +7,90 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
        
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Roboto|Inconsolata|Open+Sans|Cutive+Mono" rel="stylesheet"> 
-
-      <%= favicon_link_tag 'favicons/favicon.ico' %> 
-
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <%= favicon_link_tag 'favicons/favicon.ico' %> 
     <meta-name="keywords" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  %>
+    <%= javascript_include_tag 'isotope' %>
+    <%= javascript_include_tag 'packery'  %>
     
   </head>
 
   <body>
 
     <%= render 'shared/blog_nav' %>
+    
+    <%= render 'shared/blog_sidebar' %>
+      <div class="container">
+          <p style="font-family: Roboto; color: black !important;"><%= link_to 'Write a new blog ', new_blog_path if logged_in?(:site_admin) %> 
 
-    <%= render 'shared/blog_masthead' %>
-
-     <div class="container">
-     <p><%= link_to 'Write a new blog ', new_blog_path if logged_in?(:site_admin) %> / <%= link_to 'Topics', topics_path %></p> 
-
-     
+          <div class="row">
+            <%= yield %>
+          </div>
         
-          
-      <div class="row">
-
-        
-          
-
-        <%= yield %>
-
-        <%= render 'shared/blog_sidebar' %>
-      
+        <!-- <%= render 'shared/blog_footer' %> -->
+        <%= alerts %>
+        <%= source_helper %>
       </div>
-      
-      <%= render 'shared/blog_footer' %>
-
-      <%= alerts %>
 
 
-      <%= source_helper %>
+     <!--  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
+      <script>
+        var assignClass = function() {
+          var klasses = [ "tile--red", "tile--yellow", "tile--blue", "tile--green", "tile--pink", "tile--purple", "tile--orange", "tile--lime", "tile--cyan", "tile--indigo", "tile--deep-orange", "tile--brown", "tile--amber", "tile--light-green", "tile--teal", "tile--light-blue" ];
+          var sizes = ["tile--width2", "tile--large", "tile", "tile"];
+          
+          $('.blog-post').each( function(){
+            var colourNum = Math.round(Math.random()*14);
+            var sizeNum = Math.round(Math.random()*3);
+            var colour = klasses[colourNum];
+            var size = sizes[sizeNum];
+            $(this).addClass(colour);
+            $(this).addClass(size);
+
+          });
+        }
+        assignClass();
+    </script>
+<script>
+      // var $grid = $('.blog-main').packery({
+      // itemSelector: '.blog-post',
+      // gutter: 8
+      // });
+
+      //   $grid.imagesLoaded().progress( function() {
+      //   $('.blog-main').packery();
+      // });
+    
+      var $grid = $('.blog-main').isotope({
+          itemSelector: '.blog-post',
+          layoutMode: 'packery',
+          packery: {
+           gutter: 8
+          }
+        });
+
+
+    $('.filters-button-group li').on( 'click', 'button', function() {
+        console.log("clicked")
+        var filterValue = $(this).attr('data-filter');
+        console.log(filterValue);
+        // filterValue = filterFns[ filterValue ] || filterValue;
+        $grid.isotope({ filter: filterValue });
+        // $grid.packery('layout');
+      });
+    </script>
+
+    <!-- <script>
      
-     </div>
+      
+    
+    </script> -->
+
+    
   </body>
 </html>

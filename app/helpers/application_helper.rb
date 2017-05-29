@@ -25,6 +25,14 @@ def nav_items
 			title: 'Home'
 		},
 		{
+			url:about_path,
+			title: 'About'
+		},
+		{
+			url:contact_path,
+			title: 'Contact'
+		},
+		{
 			url:portfolios_path,
 			title: 'Portfolio'
 		},
@@ -34,14 +42,7 @@ def nav_items
 			title: 'Blog'
 		},
 		
-		{
-			url:about_path,
-			title: 'About'
-		},
-		{
-			url:contact_path,
-			title: 'Contact'
-		},
+		
 	]
 
 	end

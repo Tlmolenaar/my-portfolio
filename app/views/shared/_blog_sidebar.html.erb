@@ -1,19 +1,17 @@
-<div class="col-sm-3 offset-sm-1 blog-sidebar">
+<div class="sidebar-nav">
 
-  <div class="sidebar-module sidebar-module-inset">
-    <h4>About</h4>
-    <p> My blog is about Web Development, Rails and Cloud Development. I am writing while I am learning and I hope my posts will help clear the path for both new and seasoned developers</p>
+  <div class="topics">
+    <!-- <h4>Topics</h4> -->
+      <ul class="topic-list filters-button-group">
+      <% @sidebar_topics.each do |topic| %>
+        <li class="topic-item"><button data-filter=".<%= topic.id %>" ><%= topic.title %></button></li>
+      <% end %>
+      <li class="topic-item" data-filter="*"><button>Show All</button></li>
+      <ul>
   </div>
 
-  <div class="sidebar-module">
-    <h4>Topics</h4>
-    <% @sidebar_topics.each do |topic| %>
-      <p><%= link_to topic.title, topic_path(topic) %></p>
-    <% end %>
-  </div>
-
-  <div class="sidebar-module">
-    <h4>Elsewhere</h4>
+  <div class="social-nav">
+   <!--  <h4>Elsewhere</h4> -->
     <ol class="list-unstyled social-link">
       <li><a href="https://github.com/Tlmolenaar"><%= fa_icon "github"%></a></li>
       <li><a href="https://twitter.com/ThoMol84"><%= fa_icon "twitter"%></a></li>
