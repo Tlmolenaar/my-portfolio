@@ -446,3 +446,97 @@ bt-menu-trigger:active{
   color: white;
   text-decoration: none;
 }
+
+@media screen and (max-width: 360px){
+  .jumbotron-heading {
+  font-family: 'Kilogram';
+  font-size: 58px;
+  font-weight: 300;
+  padding-bottom:30px;
+  padding-top: 20px;
+  }
+
+  .background{
+    padding: 0px;
+  }
+
+  .tile{
+  margin: 0px;
+  margin-top: 40px;
+  }
+
+  .main-image img{
+    max-width: 100%;
+  }
+
+  .blend{
+    mix-blend-mode: exclusion;
+  }
+
+}
+
+@media screen and (max-width: 800px){
+  .jumbotron-heading{
+    font-size: 125px;
+  }
+
+  .ui-sortable-handle{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .tile{
+    height: 280px;
+    width: 280px;
+  }
+
+  .main-image{
+
+  flex: 0 0 58.33333%;
+  max-width: 60.333%;
+  }
+  
+
+  .show-text{
+    flex: 1 0 41.66667%;
+    max-width: 100%;
+  }
+
+  .blend{
+    mix-blend-mode: exclusion;
+  }
+
+}
+
+@media screen and (max-width: 980px){
+  .jumbotron-heading{
+    font-size: 162px;
+  }
+
+  .ui-sortable-handle{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .tile{
+    height: 280px;
+    width: 280px;
+  }
+
+  .main-image{
+
+  flex: 0 0 58.33333%;
+  max-width: 60.333%;
+  }
+  
+
+  .show-text{
+    flex: 1 0 41.66667%;
+    max-width: 100%;
+  }
+
+  .blend{
+    mix-blend-mode: exclusion;
+  }
+
+}

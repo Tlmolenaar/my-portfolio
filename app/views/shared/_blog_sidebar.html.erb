@@ -6,18 +6,11 @@
       <% @sidebar_topics.each do |topic| %>
         <li class="topic-item"><button data-filter=".<%= topic.id %>" ><%= topic.title %></button></li>
       <% end %>
-      <li class="topic-item" data-filter="*"><button>Show All</button></li>
+      <li class="topic-item" data-filter="*"><button>All</button></li>
       <ul>
   </div>
 
-  <div class="social-nav">
-   <!--  <h4>Elsewhere</h4> -->
-    <ol class="list-unstyled social-link">
-      <li><a href="https://github.com/Tlmolenaar"><%= fa_icon "github"%></a></li>
-      <li><a href="https://twitter.com/ThoMol84"><%= fa_icon "twitter"%></a></li>
-      <li><a href="https://www.linkedin.com/in/thomas-molenaar-44b9a418/"><%= fa_icon "linkedin"%></a></li>
-    </ol>
-  </div>
+  
 
 
 

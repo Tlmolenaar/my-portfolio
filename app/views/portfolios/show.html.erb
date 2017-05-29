@@ -1,6 +1,6 @@
 <div class="container portfolio-container">
 	<div class="row">
-		<div class="col-md-7">
+		<div class="col-md-7 main-image">
 			<%= image_tag  portfolio_img(@portfolio_item.main_image, 'main') 
 		 %>
 		</div>
@@ -8,15 +8,17 @@
 		<div class="col-md-5 show-text">
 			<h1 style="color: #f44336; font-family: Kilogram"><%= @portfolio_item.title %></h1>
 
-			<em><%= @portfolio_item.subtitle %></em>
+			<div class="blend">
+				<em><%= @portfolio_item.subtitle %></em>
 
-			<p><%= @portfolio_item.body %></p>
+				<p><%= @portfolio_item.body %></p>
 
-			<h3>Technologies Used</h3>
+				<h3>Technologies Used</h3>
 
-			<% @portfolio_item.technologies.each do |t| %>
-				<p><%= t.name %></p>
-			<% end %>
+				<% @portfolio_item.technologies.each do |t| %>
+					<p><%= t.name %></p>
+				<% end %>
+			</div>
 
 			<% if logged_in? (:site_admin) %>
 				<div >
