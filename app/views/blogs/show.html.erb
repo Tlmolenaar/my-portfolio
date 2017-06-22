@@ -1,5 +1,6 @@
-<div class="col-sm-8 blog-main">
-   <h2><%= @blog.title %></h2>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=592dc9ffde4761001225d3fd&product=sticky-share-buttons"></script>
+<div class="col-sm-12 blog-main">
+   
 
    <nav class="breadcrumb">
     <%= link_to "Home", root_path, class: "breadcrumb-item" %>
@@ -14,21 +15,31 @@
     
    </nav>
 
-   <!-- <% if @blog.image? %>
 
-    <%= image_tag(@blog.image, class: 'blog-image') %>
+   <div class="blog-body">
 
-  <% else %>
-    <%= image_tag("http://placehold.it/600x400") %>
+   <% if @blog.image? %>
 
-  <% end %> -->
+      <%= image_tag(@blog.image, class: 'blog-image') %>
 
-   <p><%= @blog.topic.title %></p>
+    
 
-   <hr>
-   <p>
-   	<%= markdown @blog.body %>
-   </p>
+    <% end %> 
+
+
+     <h2 style="color: black;margin-top: 50px;"><%= @blog.title %></h2>
+
+     <p class="blog-topic-title"><%= @blog.topic.title %></p>
+      
+    </div>
+     
+
+     <hr>
+     <div class="row">
+     <p>
+     	<%= markdown @blog.body %>
+     </p>
+     </div>
 
    <%= render 'comments/comment_form' %>
    

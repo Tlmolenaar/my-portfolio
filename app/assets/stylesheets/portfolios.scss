@@ -14,6 +14,15 @@
   src: font-url('KiloGram_KG.otf');
 }
 
+@font-face {
+  font-family: "Lemon-Milk";
+  src: font-url('LemonMilk.otf');
+}
+
+@font-face {
+  font-family: "Lemon-Milk-Light";
+  src: font-url('LemonMilklight.otf');
+}
 *,
 *:after,
 *::before {
@@ -142,7 +151,7 @@ footer p {
   box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
   overflow:hidden;
   color:white;
-  font-family:'Dosis';
+  font-family:'Lemon-Milk-Light';
   
 }
 
@@ -475,7 +484,7 @@ bt-menu-trigger:active{
 
 }
 
-@media screen and (max-width: 800px){
+@media screen and (min-width: 361px) and (max-width: 800px){
   .jumbotron-heading{
     font-size: 125px;
   }
@@ -508,7 +517,7 @@ bt-menu-trigger:active{
 
 }
 
-@media screen and (max-width: 980px){
+@media screen and (min-width: 801px) and (max-width: 980px){
   .jumbotron-heading{
     font-size: 162px;
   }

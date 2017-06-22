@@ -1,5 +1,6 @@
 
-  <div class="blog-post tile <%= blog.topic_id%> " data-category="<%= blog.topic_id %>">
+  <div class="blog-post tile <%= blog.topic_id%> " data-category="<%= blog.topic_id %>" style="background: url(http://cdn.images.express.co.uk/img/dynamic/135/590x/cruise-holidays-trends-shaking-old-people-image-788690.jpg); max-width: 100%;">
+    <div class="blog-tile-bg" >
     <h2 class="blog-post-title"><%= link_to  blog.title.upcase, blog %></h2>
   	 
     <p class="blog-post-meta"><%= 'Published ' + distance_of_time_in_words(blog.created_at, Time.now) + ' ago' %></p>
@@ -13,8 +14,9 @@
       --> </p>
   	<% end %>
     <%= link_to blog do %>
-      <span class="icon"><i class="material-icons">arrow_forward</i><span>
+      <span class="icon"><i class="material-icons">arrow_forward</i></span>
       <% end %>
+    </div>
   </div>
 
 

@@ -1,43 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great|Raleway" rel="stylesheet"> 
     <title><%= @page_title%></title>
     <%= csrf_meta_tags %>
-
     <meta-name="keywords" content="<%= @seo_keywords %>" />
-
     <%= favicon_link_tag 'favicons/favicon.ico' %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    
-   
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  %>
   </head>
 
   <body>
-
     <div class="site-wrapper">
-
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
-
-        <%=  image_tag "background.png", id: 'background' %>
-	         
+          <%=  image_tag "background.png", id: 'background' %>
           <%= render "shared/application_nav" %>
           <%= yield %>
-
-          
           <%= alerts %>
           <%= source_helper %> 
-
         </div>
       </div>
-    </div>  
-       
-
+    </div>      
   </body>
 </html>

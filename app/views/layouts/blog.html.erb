@@ -1,73 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title><%= @page_title%></title>
     <%= csrf_meta_tags %>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-       
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <%= favicon_link_tag 'favicons/favicon.ico' %> 
     <meta-name="keywords" content="<%= @seo_keywords %>" />
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  %>
     <%= javascript_include_tag 'isotope' %>
     <%= javascript_include_tag 'packery'  %>
-    
   </head>
 
   <body>
-
     <%= render 'shared/blog_nav' %>
-    
     <%= render 'shared/blog_sidebar' %>
       <div class="container">
           <p style="font-family: Roboto; color: black !important;"><%= link_to 'Write a new blog ', new_blog_path if logged_in?(:site_admin) %> 
-
           <div class="row">
             <%= yield %>
           </div>
-        
         <!-- <%= render 'shared/blog_footer' %> -->
         <%= alerts %>
         <%= source_helper %>
       </div>
-
-
-     <!--  <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
-      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
       <script>
         var assignClass = function() {
           var klasses = [ "tile--red", "tile--yellow", "tile--blue", "tile--green", "tile--pink", "tile--purple", "tile--orange", "tile--lime", "tile--cyan", "tile--indigo", "tile--deep-orange", "tile--brown", "tile--amber", "tile--light-green", "tile--teal", "tile--light-blue" ];
           var sizes = ["tile--width2", "tile--large", "tile", "tile"];
           
           $('.blog-post').each( function(){
-            var colourNum = Math.round(Math.random()*14);
+            // var colourNum = Math.round(Math.random()*14);
             var sizeNum = Math.round(Math.random()*3);
-            var colour = klasses[colourNum];
+            // var colour = klasses[colourNum];
             var size = sizes[sizeNum];
-            $(this).addClass(colour);
+            // $(this).addClass(colour);
             $(this).addClass(size);
 
+          });
+
+          $('.blog-tile-bg').each( function(){
+            var colourNum = Math.round(Math.random()*14);
+            var colour = klasses[colourNum];
+            $(this).addClass(colour);
           });
         }
         assignClass();
     </script>
-<script>
-      // var $grid = $('.blog-main').packery({
-      // itemSelector: '.blog-post',
-      // gutter: 8
-      // });
-
-      //   $grid.imagesLoaded().progress( function() {
-      //   $('.blog-main').packery();
-      // });
-    
+    <script>
       var $grid = $('.blog-main').isotope({
           itemSelector: '.blog-post',
           layoutMode: 'packery',
@@ -85,14 +68,6 @@
         $grid.isotope({ filter: filterValue });
         // $grid.packery('layout');
       });
-    </script>
-
-    <!-- <script>
-     
-      
-    
-    </script> -->
-
-    
+    </script>    
   </body>
 </html>

@@ -1,41 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title%></title>
     <%= csrf_meta_tags %>
-
     <meta-name="keywords" content="<%= @seo_keywords %>" />
-
     <%= favicon_link_tag 'favicons/favicon.ico' %>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">  
-
-
     <%= stylesheet_link_tag    'portfolios', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-   
   </head>
-
   <body>
-  <div class="background">
-  <%= render "shared/portfolio_nav" %>
-    
-	<%= render "shared/portfolio_masthead" %>
-
-    
-    <!-- end of Masthead -->
-
-
+    <div class="background">
+      <%= render "shared/portfolio_nav" %>
+      <%= render "shared/portfolio_masthead" %>
     <%= yield %>
-
     <%= render 'shared/portfolio_footer' %>
-
     <%= alerts %>
-    
-
     <%= source_helper %>
     </div>
-    
   </body>
 </html>
