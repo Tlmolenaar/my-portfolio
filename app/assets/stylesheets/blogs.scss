@@ -225,7 +225,7 @@ a, a:focus, a:hover {
 }
 
 /*
- * Custom Styles
+ * Topics
  */
 
  .topics{
@@ -317,6 +317,9 @@ a, a:focus, a:hover {
   background-color: #8e24aa;
 }
 
+/*
+ * Social Links
+
  .social-link{
   display: flex;
   justify-content: right;
@@ -345,6 +348,10 @@ a, a:focus, a:hover {
   color:#26a69a;
  } */
 
+ /*
+ * Comments
+ */
+
  .comment-card > .card {
   margin-top: 15px;
 
@@ -369,6 +376,10 @@ a, a:focus, a:hover {
 .blog-image{
   width: 100%;
 }
+
+/*
+ * tiles
+ */
 
 
 .tile

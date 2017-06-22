@@ -49,3 +49,4 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4.0'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'
+gem 'heroku-deflater', :group => :production
