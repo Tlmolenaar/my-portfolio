@@ -200,3 +200,13 @@
 	</div>
 	</div>
 </div>
+
+<script>
+$(".btn-about").click(function () {
+
+   $(this).attr('aria-expanded', function (i, attr) {
+    	return attr == 'true' ? 'false' : 'true'
+    });
+
+});
+</script>
