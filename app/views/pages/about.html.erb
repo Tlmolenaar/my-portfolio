@@ -203,7 +203,7 @@
 
 <script>
 $(".btn-about").click(function(){
-   $(".collapse").attr('aria-expanded', function(i, attr){
+   $($(".collapse").attr('aria-expanded')).modal(function(i, attr){
     	return attr == 'true' ? 'false' : 'true'
     });
 });
