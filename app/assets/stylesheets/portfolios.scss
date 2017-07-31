@@ -44,7 +44,6 @@ body {
 }
 
 .jumbotron {
-  padding-top: 6rem;
   padding-bottom: 0rem;
   margin-bottom: 0;
   background: transparent;
@@ -130,6 +129,10 @@ footer p {
 /*
  * Custom Styles
  */
+
+ .main-image img{
+  max-width: 100%;
+ }
 
  .portfolio-container{
   padding-top: 30px;
