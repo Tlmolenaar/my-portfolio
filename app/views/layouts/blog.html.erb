@@ -69,5 +69,21 @@
         // $grid.packery('layout');
       });
     </script> 
+
+    <script>
+      if(window.location.pathname == "/blogs" ){
+        console.log("blogs")
+        $(document).ready(function() {
+          if(!window.location.hash) {
+              console.log("not hash")
+              window.location = window.location + '#loaded';
+              window.location.reload();
+        }
+    })   
+    }
+    else{
+      console.log("boo!")
+    }
+</script>     
   </body>
 </html>
